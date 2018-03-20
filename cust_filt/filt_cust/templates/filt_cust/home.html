@@ -1,0 +1,19 @@
+{% extends "filt_cust/base.html" %}
+
+{% block content %}
+
+{% for c in customer %}
+
+<h3>Name : {{ c.name }} </h3>
+<h3>Company : {{ c.company }} </h3>
+<h3>Payment : {{ c.amount }} </h3>
+<hr>
+{% endfor %}
+<hr>
+
+<form method="GET">
+<h3> {{ filter.form.name }} </h3>
+<button class="w3-button w3-black" type="Submit">Enter username and click here</button>
+</form>
+
+{% endblock content %}
